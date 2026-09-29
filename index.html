@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ricardo Torres Imóveis | Imóveis à venda e para alugar em Contagem e Região</title>
+  <meta name="description" content="Encontre as melhores opções em imóveis para comprar e alugar em Contagem e região. Apartamentos, casas, coberturas e lotes com segurança e assessoria especializada da Ricardo Torres Imóveis.">
+  <meta property="og:title" content="Ricardo Torres Imóveis | Imóveis à venda e para alugar em Contagem e Região">
+  <meta property="og:description" content="Segurança e transparência na compra, venda e locação de imóveis em Contagem e região metropolitana de Belo Horizonte.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ricardotorresimoveis.com.br/">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="format-detection" content="telephone=yes">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#" class="header-logo" aria-label="Ricardo Torres Imóveis - Página inicial">
+        <img src="img/logo-ricardotorres.png" alt="Ricardo Torres Imóveis" class="logo-img">
+      </a>
+      
+      <nav class="header-nav" aria-label="Navegação principal">
+        <a href="#imoveis">Imóveis</a>
+        <a href="#sobre">A Imobiliária</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#regioes">Regiões</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      
+      <a href="https://wa.me/5531991294676?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20im%C3%B3veis%20da%20Ricardo%20Torres%20Im%C3%B3veis" class="header-contact-btn" target="_blank" rel="noopener">
+        Fale conosco
+      </a>
+      
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-overlay" id="mobile-nav">
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-header">
+        <img src="img/logo-ricardotorres.png" alt="Ricardo Torres Imóveis" class="mobile-logo-img">
+      </div>
+      <a href="#imoveis" onclick="closeMobileNav()">Imóveis</a>
+      <a href="#sobre" onclick="closeMobileNav()">A Imobiliária</a>
+      <a href="#servicos" onclick="closeMobileNav()">Serviços</a>
+      <a href="#regioes" onclick="closeMobileNav()">Regiões</a>
+      <a href="#contato" onclick="closeMobileNav()">Contato</a>
+      
+      <div class="mobile-nav-footer">
+        <p>Ligue para nós</p>
+        <a href="tel:+553133961555">(31) 3396-1555</a>
+        <p style="margin-top: 8px;">WhatsApp</p>
+        <a href="https://wa.me/5531991294676" target="_blank" rel="noopener">(31) 99129-4676</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="img/hero.jpg" alt="Imóveis de alto padrão e condomínios em Contagem e região" loading="eager">
+    </div>
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content">
+      <div class="container">
+        <div class="hero-text">
+          <span class="hero-label">Contagem, RMBH e Região</span>
+          <h1 class="hero-title">O imóvel ideal<br>com a segurança que você merece</h1>
+          <p class="hero-subtitle">Especialistas em conectar você às melhores opções de apartamentos, casas e lotes em Contagem. Segurança jurídica, transparência e agilidade na sua negociação.</p>
+        </div>
+        
+        <div class="hero-search">
+          <h3>Buscar imóvel</h3>
+          <div class="search-field">
+            <label for="search-type">Finalidade</label>
+            <select id="search-type">
+              <option value="">Comprar ou alugar</option>
+              <option value="comprar">Comprar</option>
+              <option value="alugar">Alugar</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label for="search-property">Tipo do imóvel</label>
+            <select id="search-property">
+              <option value="">Todos os tipos</option>
+              <option value="apartamento">Apartamento</option>
+              <option value="casa">Casa</option>
+              <option value="cobertura">Cobertura</option>
+              <option value="terreno">Lote / Terreno</option>
+              <option value="comercial">Comercial</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label for="search-location">Localização / Bairro</label>
+            <select id="search-location">
+              <option value="">Todas as localizações</option>
+              <option value="jardim-riacho">Jd. Riacho das Pedras (Contagem)</option>
+              <option value="santa-maria">Santa Maria (Contagem)</option>
+              <option value="ns-carmo">Nossa Senhora do Carmo (Contagem)</option>
+              <option value="ibirite">Ibirité (Recanto Verde / Ibituruna)</option>
+              <option value="betim">Betim</option>
+            </select>
+          </div>
+          <button class="search-btn" id="search-btn">Buscar imóveis</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- ========== TRUST STRIP ========== -->
+  <div class="trust-strip">
+    <div class="container">
+      <div class="trust-items">
+        <div class="trust-item">
+          <span class="trust-number">Av. Régulus, 249</span>
+          <span class="trust-text">Jd. Riacho das Pedras — Contagem/MG</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <span class="trust-number">CRECI F 14.703</span>
+          <span class="trust-text">Segurança e credibilidade jurídica</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <span class="trust-number">(31) 3396-1555</span>
+          <span class="trust-text">WhatsApp: (31) 99129-4676</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========== IMÓVEIS DESTAQUE ========== -->
+  <section class="featured-section" id="imoveis">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-header-left">
+          <p class="section-label">Oportunidades em Destaque</p>
+          <h2 class="section-title">Imóveis selecionados para você</h2>
+        </div>
+        <a href="https://www.ricardotorresimoveis.com.br/imoveis-a-venda" target="_blank" rel="noopener" class="section-link">
+          Ver todos os imóveis à venda
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      
+      <div class="properties-scroll stagger-children">
+        <!-- Property 1 -->
+        <article class="property-item" onclick="window.open('https://www.ricardotorresimoveis.com.br/imoveis-a-venda', '_blank')">
+          <div class="property-image">
+            <span class="property-tag">Venda</span>
+            <img src="img/casa.jpg" alt="Casa com 3 quartos à venda no bairro Recanto Verde" loading="lazy">
+          </div>
+          <div class="property-info">
+            <p class="property-type">Casa Residencial</p>
+            <h3 class="property-address">Casa 3 Quartos com Suíte</h3>
+            <p class="property-location">Recanto Verde, Ibirité / Contagem</p>
+            <div class="property-details">
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                3 quartos
+              </span>
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 12h20"/></svg>
+                2 vagas
+              </span>
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22V2l16 10-16 10z"/></svg>
+                110 m²
+              </span>
+            </div>
+            <p class="property-price">R$ 520.000 <small>/ venda</small></p>
+          </div>
+        </article>
+        
+        <!-- Property 2 -->
+        <article class="property-item" onclick="window.open('https://www.ricardotorresimoveis.com.br/imoveis-a-venda', '_blank')">
+          <div class="property-image">
+            <span class="property-tag">Venda</span>
+            <img src="img/apartamento.jpg" alt="Apartamento 3 quartos no Jardim Riacho das Pedras em Contagem" loading="lazy">
+          </div>
+          <div class="property-info">
+            <p class="property-type">Apartamento</p>
+            <h3 class="property-address">Edifício Jardim Riacho</h3>
+            <p class="property-location">Jardim Riacho das Pedras, Contagem</p>
+            <div class="property-details">
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                3 quartos
+              </span>
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 12h20"/></svg>
+                2 vagas
+              </span>
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22V2l16 10-16 10z"/></svg>
+                106 m²
+              </span>
+            </div>
+            <p class="property-price">R$ 811.200 <small>/ venda</small></p>
+          </div>
+        </article>
+        
+        <!-- Property 3 -->
+        <article class="property-item" onclick="window.open('https://www.ricardotorresimoveis.com.br/imoveis-para-alugar', '_blank')">
+          <div class="property-image">
+            <span class="property-tag" style="background: #122b49;">Locação</span>
+            <img src="img/interior.jpg" alt="Casa ampla para locação no Jardim Riacho das Pedras em Contagem" loading="lazy">
+          </div>
+          <div class="property-info">
+            <p class="property-type">Casa para Locação</p>
+            <h3 class="property-address">Residência 4 Quartos com Garagem</h3>
+            <p class="property-location">Jardim Riacho das Pedras, Contagem</p>
+            <div class="property-details">
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                4 quartos
+              </span>
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 12h20"/></svg>
+                3 vagas
+              </span>
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22V2l16 10-16 10z"/></svg>
+                236 m²
+              </span>
+            </div>
+            <p class="property-price">R$ 4.500 <small>/ mês</small></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== SOBRE A RICARDO TORRES IMÓVEIS ========== -->
+  <section class="about-section" id="sobre">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images reveal-left">
+          <div class="about-img-main">
+            <img src="img/escritorio.jpg" alt="Atendimento e consultoria imobiliária na Ricardo Torres Imóveis" loading="lazy">
+          </div>
+          <div class="about-img-secondary">
+            <img src="img/bairro.jpg" alt="Bairros e regiões de Contagem e RMBH" loading="lazy">
+          </div>
+          <div class="about-experience">
+            <span class="exp-number">+15</span>
+            <span class="exp-label">Anos de<br>experiência</span>
+          </div>
+        </div>
+        
+        <div class="about-content reveal-right">
+          <p class="section-label">Quem somos</p>
+          <h2 class="section-title">Encontrar o imóvel ideal<br>exige confiança e conhecimento de mercado</h2>
+          <p class="about-text">
+            Encontrar o imóvel ideal exige mais do que uma busca; exige confiança e conhecimento profundo de mercado. Na <strong>Ricardo Torres Imóveis</strong>, somos especialistas em conectar pessoas aos melhores apartamentos, casas, coberturas e lotes em Contagem e região metropolitana.
+          </p>
+          <p class="about-text">
+            Sob a liderança do corretor <strong>Ricardo Torres (CRECI F 14.703)</strong>, oferecemos suporte consultivo completo e rigor jurídico em todas as fases da negociação imobiliária — garantindo total tranquilidade, agilidade e valorização para o seu patrimônio.
+          </p>
+          
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Segurança jurídica</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">14703</span>
+              <span class="stat-label">CRECI Oficial</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">98%</span>
+              <span class="stat-label">Clientes satisfeitos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== SERVIÇOS ========== -->
+  <section class="services-section" id="servicos">
+    <div class="container">
+      <div class="services-intro reveal">
+        <p class="section-label">Nossas Soluções</p>
+        <h2 class="section-title">Como podemos<br>te ajudar</h2>
+        <p>Atuamos com soluções imobiliárias completas e integradas, assegurando transparência, atendimento humanizado e segurança contratual em cada etapa.</p>
+      </div>
+      
+      <div class="services-grid stagger-children">
+        <div class="service-item">
+          <span class="service-number">01</span>
+          <h3 class="service-title">Compra e Venda de Imóveis</h3>
+          <p class="service-desc">Intermediação com rigor técnico e conhecimento de mercado para compra e venda de apartamentos, casas, coberturas e áreas privativas em Contagem e região.</p>
+        </div>
+        
+        <div class="service-item">
+          <span class="service-number">02</span>
+          <h3 class="service-title">Locação Residencial e Comercial</h3>
+          <p class="service-desc">Gestão completa e segura de aluguéis, desde a análise cadastral criteriosa de inquilinos e garantias até a vistoria detalhada e assistência ao locador.</p>
+        </div>
+        
+        <div class="service-item">
+          <span class="service-number">03</span>
+          <h3 class="service-title">Anuncie seu Imóvel</h3>
+          <p class="service-desc">Divulgação estratégica do seu imóvel nos principais portais imobiliários e redes de parceiros para atrair compradores e locatários qualificados com agilidade.</p>
+        </div>
+        
+        <div class="service-item">
+          <span class="service-number">04</span>
+          <h3 class="service-title">Assessoria & Avaliação Imobiliária</h3>
+          <p class="service-desc">Avaliação mercadológica precisa fundamentada na dinâmica real da região, além de suporte jurídico para garantir negociações seguras e sem surpresas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== REGIÕES ========== -->
+  <section class="regions-section" id="regioes">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-header-left">
+          <p class="section-label">Área de Atuação</p>
+          <h2 class="section-title">Conheça as regiões<br>que atendemos</h2>
+        </div>
+      </div>
+      
+      <div class="regions-mosaic stagger-children">
+        <div class="region-card">
+          <img src="img/apartamento.jpg" alt="Apartamentos e casas no Jardim Riacho das Pedras e Contagem" loading="lazy">
+          <div class="region-card-overlay">
+            <h3 class="region-name">Jardim Riacho das Pedras</h3>
+            <span class="region-count">Sede da imobiliária & forte presença</span>
+          </div>
+        </div>
+        
+        <div class="region-card">
+          <img src="img/bairro.jpg" alt="Imóveis em Contagem e bairros vizinhos" loading="lazy">
+          <div class="region-card-overlay">
+            <h3 class="region-name">Contagem e RMBH</h3>
+            <span class="region-count">Santa Maria, Carmo e principais bairros</span>
+          </div>
+        </div>
+        
+        <div class="region-card">
+          <img src="img/hero.jpg" alt="Casas e lotes em Ibirité e Betim" loading="lazy">
+          <div class="region-card-overlay">
+            <h3 class="region-name">Ibirité e Betim</h3>
+            <span class="region-count">Casas, lotes e áreas privativas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== DEPOIMENTOS ========== -->
+  <section class="testimonial-section">
+    <div class="container">
+      <div class="testimonial-layout">
+        <div class="testimonial-aside reveal-left">
+          <p class="section-label">Confiança e Credibilidade</p>
+          <h2 class="section-title">O que dizem nossos clientes</h2>
+          <p>A segurança e a transparência em cada negociação realizada pela Ricardo Torres Imóveis se refletem na satisfação contínua de nossos clientes e parceiros.</p>
+        </div>
+        
+        <div class="testimonials-wrapper stagger-children">
+          <div class="testimonial-item">
+            <p class="testimonial-text">"O atendimento da Ricardo Torres Imóveis foi impecável do início ao fim. Encontramos nosso apartamento no Jardim Riacho com total clareza na documentação e fechamos negócio com segurança absoluta."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">R</div>
+              <div class="testimonial-meta">
+                <strong>Rodrigo F.</strong>
+                <span>Comprador — Jardim Riacho das Pedras, Contagem</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-item">
+            <p class="testimonial-text">"Coloquei meu imóvel para alugar e a equipe cuidou de toda a divulgação e contrato com extrema agilidade e profissionalismo. Em poucos dias o contrato foi assinado sem nenhuma complicação."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">C</div>
+              <div class="testimonial-meta">
+                <strong>Camila M.</strong>
+                <span>Proprietária — Santa Maria, Contagem</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== VISUAL BREAK ========== -->
+  <div class="visual-break">
+    <div class="visual-break-bg">
+      <img src="img/interior.jpg" alt="" loading="lazy" aria-hidden="true">
+    </div>
+    <div class="visual-break-overlay"></div>
+    <div class="visual-break-content reveal">
+      <p>Encontrar o imóvel ideal exige confiança e conhecimento.<br>Estamos prontos para guiar a sua próxima conquista.</p>
+    </div>
+  </div>
+
+
+  <!-- ========== CONTATO / CTA ========== -->
+  <section class="cta-section" id="contato">
+    <div class="container">
+      <div class="cta-grid">
+        <div class="cta-content reveal-left">
+          <p class="section-label">Fale com a Ricardo Torres Imóveis</p>
+          <h2 class="section-title">Pronto para dar<br>o próximo passo?</h2>
+          <p>Estamos localizados na Avenida Régulus, 249 — Jardim Riacho das Pedras, Contagem - MG. Atendimento de segunda a sexta, das 8h às 18h, e aos sábados das 8h às 12h. Fale diretamente com nossa equipe pelos canais oficiais:</p>
+          
+          <div class="contact-channels">
+            <a href="https://wa.me/5531991294676?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20im%C3%B3veis%20da%20Ricardo%20Torres%20Im%C3%B3veis" class="contact-channel" target="_blank" rel="noopener">
+              <div class="contact-channel-icon">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.613.613l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.34 0-4.512-.767-6.262-2.063l-.437-.34-3.2 1.073 1.073-3.2-.34-.437A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              </div>
+              <div class="contact-channel-info">
+                <h4>WhatsApp</h4>
+                <p>(31) 99129-4676</p>
+              </div>
+            </a>
+            
+            <a href="tel:+553133961555" class="contact-channel">
+              <div class="contact-channel-icon">
+                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              </div>
+              <div class="contact-channel-info">
+                <h4>Telefone Fixo</h4>
+                <p>(31) 3396-1555</p>
+              </div>
+            </a>
+            
+            <a href="mailto:Ricardo@ricardotorresimoveismg.com.br" class="contact-channel">
+              <div class="contact-channel-icon">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </div>
+              <div class="contact-channel-info">
+                <h4>E-mail</h4>
+                <p>Ricardo@ricardotorresimoveismg.com.br</p>
+              </div>
+            </a>
+
+            <a href="https://www.instagram.com/imobiliaria_ricardo_torres" class="contact-channel" target="_blank" rel="noopener">
+              <div class="contact-channel-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </div>
+              <div class="contact-channel-info">
+                <h4>Instagram</h4>
+                <p>@imobiliaria_ricardo_torres</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="cta-image reveal-scale">
+          <img src="img/casa.jpg" alt="Casas e empreendimentos da Ricardo Torres Imóveis em Contagem" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo" aria-label="Ricardo Torres Imóveis - Página inicial">
+            <img src="img/logo-ricardotorres.png" alt="Ricardo Torres Imóveis" class="footer-logo-img">
+          </a>
+          <p>Avenida Régulus, 249 — Jardim Riacho das Pedras<br>Contagem - MG | CEP 32241-070</p>
+          
+          <div class="footer-social">
+            <a href="https://www.instagram.com/imobiliaria_ricardo_torres" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/imoveisricardotorres" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Imóveis</h4>
+          <ul>
+            <li><a href="https://www.ricardotorresimoveis.com.br/imoveis-a-venda" target="_blank" rel="noopener">Imóveis à venda</a></li>
+            <li><a href="https://www.ricardotorresimoveis.com.br/imoveis-para-alugar" target="_blank" rel="noopener">Imóveis para alugar</a></li>
+            <li><a href="https://www.ricardotorresimoveis.com.br/imoveis-a-venda?tipo=apartamento" target="_blank" rel="noopener">Apartamentos</a></li>
+            <li><a href="https://www.ricardotorresimoveis.com.br/imoveis-a-venda?tipo=casa" target="_blank" rel="noopener">Casas</a></li>
+            <li><a href="https://www.ricardotorresimoveis.com.br/anuncie-seu-imovel" target="_blank" rel="noopener">Anuncie seu Imóvel</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Regiões</h4>
+          <ul>
+            <li><a href="#regioes">Jardim Riacho das Pedras</a></li>
+            <li><a href="#regioes">Santa Maria (Contagem)</a></li>
+            <li><a href="#regioes">Nossa Senhora do Carmo</a></li>
+            <li><a href="#regioes">Ibirité e Região</a></li>
+            <li><a href="#regioes">Betim</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Institucional</h4>
+          <ul>
+            <li><a href="#sobre">A Imobiliária</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Fale Conosco</a></li>
+            <li><a href="https://www.ricardotorresimoveis.com.br/politica-de-privacidade" target="_blank" rel="noopener">Política de Privacidade</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Ricardo Torres Imóveis. Todos os direitos reservados.</p>
+        <span class="footer-creci">CRECI F 14.703 — Contagem / MG</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ========== WHATSAPP FLOAT ========== -->
+  <a href="https://wa.me/5531991294676?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20im%C3%B3veis%20da%20Ricardo%20Torres%20Im%C3%B3veis" class="whatsapp-float" id="whatsapp-float" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp da Ricardo Torres Imóveis">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.613.613l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.34 0-4.512-.767-6.262-2.063l-.437-.34-3.2 1.073 1.073-3.2-.34-.437A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </a>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
